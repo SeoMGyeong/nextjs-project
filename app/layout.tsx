@@ -1,5 +1,6 @@
 import Footer from "./Footer";
-import Header from "./header";
+import Header from "../components/Header";
+import "./globals.css";
 
 export const metadata = {
   title: "Next.js",
@@ -14,13 +15,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <div className="w-full h-16" style={{ backgroundColor: "#383838" }}>
-          <div className="container mx-auto">
-            <Header />
-          </div>
+        <div>
+          <Header />
+          <div className="lg:pl-72">{children}</div>
         </div>
-        <div>{children}</div> {/* page내용이 children에 들어감 */}
-        <div className="h-80 bg-black">
+        {/* page내용이 children에 들어감 */}
+        <div className="lg:pl-72 h-80 bg-black">
           <div className="container mx-auto">
             <Footer />
           </div>
